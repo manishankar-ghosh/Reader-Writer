@@ -15,7 +15,7 @@ namespace ReaderWriter
         private async Task ReadAsync()
         {
             readInProgress = true;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) // Simulate few reads
             {
                 Console.WriteLine("Reading data...");
                 //_signal.Reset();
