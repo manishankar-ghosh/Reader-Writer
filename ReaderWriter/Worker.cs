@@ -19,7 +19,7 @@ namespace ReaderWriter
             readInProgress = true;
             for (int i = 0; i < 10; i++) // Simulate few reads
             {
-                if(_data.Count > _readerThresholdCount)
+                if(_data.Count > _readerThresholdCount) // To ensure that we do not read too much data in memory while writer is struggling to consume data
                 {
                     var timeNow = DateTime.Now;
                     Console.WriteLine("Reader Threshold reached halting for some time.");
