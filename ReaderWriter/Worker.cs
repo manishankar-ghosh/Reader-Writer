@@ -47,7 +47,7 @@ namespace ReaderWriter
             {
                 if (_data.IsEmpty && readInProgress)
                 {
-                    Console.WriteLine("Writer --> Waiting for data...");
+                    Console.WriteLine("\r\nWriter --> Waiting for data...");
                     _signalReader.WaitOne();
                 }
                 else if (_data.TryDequeue(out int data))
